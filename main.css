@@ -114,6 +114,22 @@ header .nav-right button:last-child {
     margin-left: 5px;
 }
 
+section.wrapper {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    margin: 70px auto 0;
+}
+
+section.wrapper h1 {
+    font-family: 'Arbutus Slab', serif;
+    font-size: 30px;
+    font-size: 35px;
+    font-style: italic;
+    line-height: 50px;
+    grid-column: 2;
+}
+
 
 
 
