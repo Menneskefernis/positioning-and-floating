@@ -50,7 +50,6 @@ table {
     box-sizing: border-box;
 }
 
-
 a {
     text-decoration: none;
     color: #000;
@@ -61,6 +60,12 @@ button {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -127,8 +132,8 @@ section.wrapper {
     max-width: 1000px;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 200px 1fr 200px;
-    grid-gap: 20px;
+    grid-template-columns: 150px 1fr 150px;
+    grid-gap: 30px;
     margin: 60px auto 0;
 }
 
@@ -142,7 +147,6 @@ section.wrapper h1 {
     font-size: 35px;
     font-style: italic;
     line-height: 50px;
-    grid-column: 2;
 }
 
 section.wrapper figure {
@@ -168,7 +172,10 @@ section.wrapper figure span {
 /* Article meta data */
 
 .article-meta {
+    margin-top: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .article-meta p span {
@@ -178,9 +185,11 @@ section.wrapper figure span {
 .article-meta section {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 13px;
+    font-weight: normal;
     color: rgba(0, 0, 0, 0.7);
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .article-meta li {
@@ -251,10 +260,77 @@ section.wrapper figure span {
     background: #fff;
 }
 
+/* main article */
 
+.article p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 18px;
+}
 
+.article p a {
+    color: rgb(50, 104, 145);
+    text-decoration: underline;
+}
 
+.article p a:hover {
+    text-decoration: none;
+}
 
+.article aside {
+    text-align: center;
+    margin: 30px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.article aside a {
+    color: rgb(50, 104, 145);
+}
+
+.article .block-line {
+    border-top: 1px solid black;
+    margin: 20px auto;
+    width: 70px;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.article h2 {
+    margin: 40px 0 20px;
+    font-family: 'Arbutus Slab', serif;
+    font-size: 20px;
+}
+
+/* theory of inflation */
+
+#theory-of-inflation {
+    position: relative;
+}
+
+#theory-of-inflation .image-description {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.image-description.top {
+    top: 250px;
+}
+
+.image-description.bottom {
+    top: 540px;
+}
+
+#theory-of-inflation p span {
+    font-weight: bold;
+    color: black;
+    margin-right: 4px;
+}
 
 
 
