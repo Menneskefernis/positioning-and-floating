@@ -42,6 +42,15 @@ table {
 	border-spacing: 0;
 }
 
+/* My code */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
 a {
     text-decoration: none;
     color: #000;
@@ -156,12 +165,91 @@ section.wrapper figure span {
     color: grey;
 }
 
+/* Article meta data */
 
+.article-meta {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+.article-meta p span {
+    text-decoration: underline rgb(0, 0, 0, 0.1);
+}
 
+.article-meta section {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+}
 
+.article-meta li {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+}
 
+.article-meta li:last-child {
+    margin-right: 0;
+}
 
+.article-meta svg:hover g {
+    stroke: rgba(0, 0, 0, 0.2);
+}
+
+.article-meta button {
+    position: relative;
+    background: none;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 4px;
+    padding: 4px 7px 1px;
+}
+
+.article-meta button:hover {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.article-meta button:hover i:before {
+    border-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.article-meta i:before {
+    bottom: -7px;
+    content: "";
+    display: block;
+    left: 15px;
+    position: absolute;
+    width: 0px;
+    border-color: rgb(102, 102, 102) transparent;
+    border-style: solid;
+    border-width: 6px 0px 0px 8px;
+}
+
+.article-meta i:after {
+    bottom: -6px;
+    content: "";
+    display: block;
+    left: 16px;
+    position: absolute;
+    width: 0px;
+    border-color: rgb(255, 255, 255) transparent;
+    border-style: solid;
+    border-width: 6px 0px 0px 6px;
+}
+
+.article-meta .social {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    background: #eee;
+    border: 2px solid #eee;
+    border-radius: 50%;
+}
+
+.article-meta .social:hover {
+    background: #fff;
+}
 
 
 
