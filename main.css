@@ -52,11 +52,20 @@ table {
 
 a {
     text-decoration: none;
-    color: #000;
 }
 
 button {
     cursor: pointer;
+}
+
+.btn {
+    background: #567b95;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #326891;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -75,9 +84,6 @@ header .header-items {
     align-items: center;
     height: 40px;
     margin: 0 150px;
-}
-
-header .header-items {
     font-size: 13px;
     font-family: 'Libre Franklin', sans-serif;
     text-transform: uppercase;
@@ -86,6 +92,7 @@ header .header-items {
 
 header .nav-left >* {
     margin-bottom: 4px;
+    color: #000;
 }
 
 header .nav-left button {
@@ -115,33 +122,28 @@ header .header-items #logo {
 }
 
 header .nav-right >* {
-    background: #567b95;
-    color: #fff;
-    font-weight: bold;
-    border: 1px solid #326891;
-    border-radius: 3px;
-    text-transform: uppercase;
     padding: 7px 12px 5px;
+    font-size: 11px;
 }
 
 header .nav-right button:last-child {
     margin-left: 5px;
 }
 
-section.wrapper {
+article {
     max-width: 1000px;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 150px 1fr 150px;
+    grid-template-columns: 170px 1fr 170px;
     grid-gap: 30px;
     margin: 60px auto 0;
 }
 
-section.wrapper >* {
+article >* {
     grid-column: 2 / -2;
   }
 
-section.wrapper h1 {
+article > h1 {
     font-family: 'Arbutus Slab', serif;
     font-size: 30px;
     font-size: 35px;
@@ -149,11 +151,15 @@ section.wrapper h1 {
     line-height: 50px;
 }
 
-section.wrapper figure {
+article figure {
+    margin-bottom: 20px;
+}
+
+article figure.wide {
     grid-column: 1 / -1;
 }
 
-section.wrapper figure img {
+article figure img {
     width: 100%;
 }
 
@@ -162,18 +168,19 @@ figcaption {
     font-size: 15px;
     color: rgb(82, 82, 82);
     margin-top: 10px;
+    line-height: 18px;
 }
 
-section.wrapper figure span {
+article figure span {
     font-size: 13px;
     color: grey;
+    margin-left: 4px;
 }
 
 /* Article meta data */
 
 .article-meta {
-    margin-top: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
     font-size: 15px;
     font-weight: bold;
 }
@@ -182,7 +189,7 @@ section.wrapper figure span {
     text-decoration: underline rgb(0, 0, 0, 0.1);
 }
 
-.article-meta section {
+.article-meta section, article footer div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -192,14 +199,14 @@ section.wrapper figure span {
     margin-top: 25px;
 }
 
-.article-meta li {
+.article-meta li, footer li {
     display: inline-block;
     margin-right: 10px;
     cursor: pointer;
     vertical-align: middle;
 }
 
-.article-meta li:last-child {
+.article-meta li:last-child, footer li:last-child {
     margin-right: 0;
 }
 
@@ -247,7 +254,7 @@ section.wrapper figure span {
     border-width: 6px 0px 0px 6px;
 }
 
-.article-meta .social {
+.social {
     width: 30px;
     height: 30px;
     padding: 6px;
@@ -256,28 +263,31 @@ section.wrapper figure span {
     border-radius: 50%;
 }
 
-.article-meta .social:hover {
+.social:hover {
     background: #fff;
 }
 
 /* main article */
 
-.article p {
+.article-text p {
     font-size: 18px;
     line-height: 30px;
+}
+
+.article-text p:not(:last-of-type) {
     margin-bottom: 18px;
 }
 
-.article p a {
+.article-text p a {
     color: rgb(50, 104, 145);
     text-decoration: underline;
 }
 
-.article p a:hover {
+.article-text p a:hover {
     text-decoration: none;
 }
 
-.article aside {
+.article-text aside {
     text-align: center;
     margin: 30px 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -286,18 +296,18 @@ section.wrapper figure span {
     line-height: 18px;
 }
 
-.article aside a {
+.article-text aside a {
     color: rgb(50, 104, 145);
 }
 
-.article .block-line {
+.article-text .block-line {
     border-top: 1px solid black;
     margin: 20px auto;
     width: 70px;
     border-color: rgba(0, 0, 0, 0.2);
 }
 
-.article h2 {
+.article-text h2 {
     margin: 40px 0 20px;
     font-family: 'Arbutus Slab', serif;
     font-size: 20px;
@@ -309,34 +319,71 @@ section.wrapper figure span {
     position: relative;
 }
 
+figcaption h1 {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+#theory-of-inflation figcaption {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
 #theory-of-inflation .image-description {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
 }
 
 .image-description.top {
-    top: 250px;
+    top: 220px;
 }
 
 .image-description.bottom {
-    top: 540px;
+    top: 520px;
 }
 
 #theory-of-inflation p span {
     font-weight: bold;
     color: black;
+    margin-left: 0;
     margin-right: 4px;
 }
 
+#theory-of-inflation div:last-of-type {
+    border-bottom: 1px solid black;
+    width: 70px;
+}
 
+#theory-of-inflation .author {
+    margin-top: 15px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 15px;
+}
 
+article footer {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(82, 82, 82);
+    font-size: 11px;
+    line-height: 16px;
+}
 
+article footer a {
+    color: rgb(82, 82, 82);
+    text-decoration: underline;
+}
 
+article footer a:hover {
+    text-decoration: none;
+}
 
-
-
-
+article footer button {
+    padding: 10px 80px;
+    font-size: 13px;
+}
