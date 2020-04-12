@@ -137,11 +137,12 @@ article {
     grid-template-columns: 170px 1fr 170px;
     grid-gap: 30px;
     margin: 60px auto 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 article >* {
     grid-column: 2 / -2;
-  }
+}
 
 article > h1 {
     font-family: 'Arbutus Slab', serif;
@@ -185,8 +186,13 @@ article figure span {
     font-weight: bold;
 }
 
-.article-meta p span {
-    text-decoration: underline rgb(0, 0, 0, 0.1);
+.article-meta p a {
+    text-decoration: underline rgb(0, 0, 0, 0.2);
+    color: black;
+}
+
+.article-meta p a:hover {
+    text-decoration: none;
 }
 
 .article-meta section, article footer div {
@@ -270,8 +276,8 @@ article figure span {
 /* main article */
 
 .article-text p {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 32px;
 }
 
 .article-text p:not(:last-of-type) {
@@ -308,7 +314,7 @@ article figure span {
 }
 
 .article-text h2 {
-    margin: 40px 0 20px;
+    margin-bottom: 20px;
     font-family: 'Arbutus Slab', serif;
     font-size: 20px;
 }
@@ -319,7 +325,7 @@ article figure span {
     position: relative;
 }
 
-figcaption h1 {
+figcaption h2 {
     color: black;
     font-size: 16px;
     font-weight: bold;
@@ -386,4 +392,43 @@ article footer a:hover {
 article footer button {
     padding: 10px 80px;
     font-size: 13px;
+}
+
+article > aside {
+    grid-area: 5 / 3;
+    align-self: center;
+    width: 210px;
+    margin-left: 80px;
+}
+
+aside li a {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+aside img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+aside h2 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+aside h3 {
+    flex: 1;
+    color: black;
+    font-size: 14px;
+    font-weight: light;
+    line-height: 18px;
+}
+
+aside hr {
+    color: rgba(0, 0, 0, 0.2);
+    margin: 10px 0 13px;
 }
