@@ -446,22 +446,42 @@ aside hr {
 }
 
 .extra-reading {
-    max-width: 1000px;
-    float: left;
+    max-width: 1200px;
+}
+
+.extra-reading h2 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 20px 0;
 }
 
 .extra-reading .space {
-    display: flex;
-    flex-wrap: wrap;
+    float: left;
 }
 
-.extra-reading .space >* {
-    flex: 1 1 300px;
-    margin-right: 20px;
+.space .article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
 }
 
-section.extra-reading img {
+.space figure img {
     width: 100%;
+}
+
+.space figure {
+    text-align: end;
+}
+
+.space figure small {
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+}
+
+.space h3 {
+   
 }
 
 .most-popular {
