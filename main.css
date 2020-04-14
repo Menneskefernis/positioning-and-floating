@@ -441,12 +441,23 @@ aside hr {
 
 /* bottom article suggestions */
 
+.extra-reading {
+    max-width: 1210px;
+    margin: 0 auto;
+}
+
 .space, .most-popular {
     border-top: 1px solid black;
 }
 
-.extra-reading {
-    max-width: 1200px;
+.extra-reading h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: black;
+}
+
+.extra-reading h3:hover {
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .extra-reading h2 {
@@ -456,36 +467,55 @@ aside hr {
     margin: 20px 0;
 }
 
-.extra-reading .space {
+.extra-reading .thumb-articles {
     float: left;
 }
 
-.space .article-grid {
+.extra-reading .thumb-articles hr {
+    margin-top: 20px;
+}
+
+.thumb-articles .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
 }
 
-.space figure img {
+.thumb-articles figure img {
     width: 100%;
 }
 
-.space figure {
+.thumb-articles figure {
     text-align: end;
+    margin-bottom: 5px;
 }
 
-.space figure small {
+.thumb-articles figure figcaption {
     font-size: 10px;
     color: rgba(0, 0, 0, 0.4);
-    margin-bottom: 10px;
+    display: inline-block;
+    margin: 0 0 2px;
+    line-height: 10px;
 }
 
-.space h3 {
-   
+.thumb-articles h3 {
+    margin-bottom: 5px;
+}
+
+.thumb-articles time {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.4);   
 }
 
 .most-popular {
     float: right;
     max-width: 300px;
-    margin-left: 30px;
+}
+
+.most-popular h3 {
+    display: block;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
+    margin-bottom: 15px;
 }
