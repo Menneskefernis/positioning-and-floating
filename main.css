@@ -116,7 +116,7 @@ header .nav-left a:hover {
     height: 15px;
 }
 
-header .header-items #logo {
+.logo {
     height: 25px;
     margin-top: 7px;
 }
@@ -441,12 +441,12 @@ aside hr {
 
 /* bottom article suggestions */
 
-.extra-reading {
-    max-width: 1210px;
+.extra-reading, footer {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.space, .most-popular {
+.thumb-articles, .most-popular {
     border-top: 1px solid black;
 }
 
@@ -475,9 +475,14 @@ aside hr {
     margin-top: 20px;
 }
 
+.thumb-articles {
+    width: calc(75% - 30px);
+    margin-bottom: 60px;
+}
+
 .thumb-articles .article-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     grid-gap: 20px;
 }
 
@@ -510,7 +515,8 @@ aside hr {
 
 .most-popular {
     float: right;
-    max-width: 300px;
+    max-width: 25%;
+    margin-left: 30px;
 }
 
 .most-popular h3 {
@@ -518,4 +524,64 @@ aside hr {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 15px;
     margin-bottom: 15px;
+}
+
+/* Page footer */
+
+footer {
+    clear: both;
+    border-top: 3px double rgba(0, 0, 0, 0.1);
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+footer .top {
+    padding-top: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .top a {
+    font-size: 11px;
+    color: rgb(86, 123, 149)
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer nav >* {
+    flex-basis: 200px;
+}
+
+footer nav h3 {
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+footer nav li {
+    display: block;
+
+}
+
+footer nav a {
+    color: black;
+    width: 150px;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+footer nav section:last-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
 }
