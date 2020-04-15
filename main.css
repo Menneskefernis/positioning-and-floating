@@ -581,7 +581,44 @@ footer nav a:hover {
     text-decoration: underline;
 }
 
+/* Last footer section */
+
 footer nav section:last-child {
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     padding-left: 15px;
+    min-width: 220px;
+}
+
+footer .subscribe-list {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer .subscribe-list a,
+footer .corporate-links a,
+footer .alternate-links a {
+    width: 100%;
+}
+
+footer .subscribe-list li {
+    margin-bottom: 5px;
+}
+
+footer .subscribe-list svg {
+    height: 12px;
+}
+
+footer .subscribe-list a {
+    font-size: 14px;
+    width: 100%;
+}
+
+footer .corporate-links a,
+footer .alternate-links a {
+    font-size: 11px;
+}
+
+footer .alternate-links {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 12px;
 }
