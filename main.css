@@ -195,7 +195,7 @@ article figure span {
     text-decoration: none;
 }
 
-.article-meta section, article footer div {
+.article-meta section, article .article-end div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -205,14 +205,14 @@ article figure span {
     margin-top: 25px;
 }
 
-.article-meta li, footer li {
+.article-meta li, .article-end li {
     display: inline-block;
     margin-right: 10px;
     cursor: pointer;
     vertical-align: middle;
 }
 
-.article-meta li:last-child, footer li:last-child {
+.article-meta li:last-child, .article-end li:last-child {
     margin-right: 0;
 }
 
@@ -348,11 +348,11 @@ figcaption h2 {
 }
 
 .image-description.top {
-    top: 220px;
+    top: 233px;
 }
 
 .image-description.bottom {
-    top: 520px;
+    top: 530px;
 }
 
 #theory-of-inflation p span {
@@ -373,35 +373,35 @@ figcaption h2 {
     font-size: 15px;
 }
 
-article footer {
+article .article-end {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(82, 82, 82);
     font-size: 11px;
     line-height: 16px;
 }
 
-article footer a {
+article .article-end a {
     color: rgb(82, 82, 82);
     text-decoration: underline;
 }
 
-article footer a:hover {
+article .article-end a:hover {
     text-decoration: none;
 }
 
-article footer button {
+article .article-end button {
     padding: 10px 80px;
     font-size: 13px;
 }
+
+/* mid-article aside */
 
 article > aside {
     grid-area: 5 / 3;
     align-self: center;
     width: 210px;
-    margin-left: 80px;
+    margin-left: 65px;
 }
-
-/* mid-article aside */
 
 aside li a {
     display: flex;
@@ -532,6 +532,7 @@ footer {
     clear: both;
     border-top: 3px double rgba(0, 0, 0, 0.1);
     font-family: 'Libre Franklin', sans-serif;
+    margin-bottom: 40px;
 }
 
 footer .top {
@@ -606,6 +607,7 @@ footer .subscribe-list li {
 
 footer .subscribe-list svg {
     height: 12px;
+    margin-right: 5px;
 }
 
 footer .subscribe-list a {
@@ -615,10 +617,35 @@ footer .subscribe-list a {
 
 footer .corporate-links a,
 footer .alternate-links a {
-    font-size: 11px;
+    font-size: 10px;
 }
 
 footer .alternate-links {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 12px;
+}
+
+/* Bottom section of footer */
+
+footer .general-links {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+footer .general-links li {
+    margin: 5px 8px;
+    display: inline-block;
+}
+
+footer .general-links a {
+    display: inline-block;
+    color: #666;
+    padding: 10px 0;
+}
+
+footer .general-links a:hover {
+    text-decoration: underline;
 }
